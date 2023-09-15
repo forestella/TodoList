@@ -29,14 +29,13 @@ class ViewController: UIViewController {
             let task = Task(title: title, done: false)
             self?.tasks.append(task)
             self?.tableView.reloadData()
-            debugPrint("\(self?.tasks)")
+            print("\(alert.textFields?[0].text)")
+            
         })
         let cancelButton = UIAlertAction(title: "취소", style: .cancel, handler: nil)
-//        let destructiveButton = UIAlertAction(title: "삭제", style: .destructive, handler: nil)
       
         alert.addAction(cancelButton)
         alert.addAction(registerAction)
-//        alert.addAction(destructiveButton)
         alert.addTextField(configurationHandler: { textField in
             textField.placeholder = "할 일을 입력해 주세요."
         })
